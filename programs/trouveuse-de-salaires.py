@@ -1,3 +1,4 @@
+# create the variables
 horaire = ""
 salaire_annuel = ""
 
@@ -16,11 +17,13 @@ while horaire == "":
         horaire = ""
 
 def salaire_mensuel(salaire_annuel) :
+    """This function is so divides the 'salaire_annuel' variable by 12"""
     valeur1 = int(salaire_annuel)/12
     return(valeur1)
 
 
 def salaire_hebdomadaire(salaire_mensuel) :
+    """This function divides the 'salaire_mensuel' by 4"""
     valeur2 = int(salaire_mensuel)/4
     return(valeur2)
 
