@@ -4,17 +4,25 @@ salaire_annuel = ""
 
 while salaire_annuel == "":
     salaire_annuel = input("Quel est votre salaire annuel ? ")
-    try :
-        int(salaire_annuel)
-    except :
+    if salaire_annuel != 0 :
+        try :
+            int(salaire_annuel)
+        except :
+            salaire_annuel = ""
+    else :
         salaire_annuel = ""
+        continue
 
 while horaire == "":
     horaire = input("Combien d'heures travaillez-vous par semaine ? ")
-    try :
-        int(horaire)
-    except :
+    if horaire != 0 :
+        try :
+            int(horaire)
+        except :
+            horaire = ""
+    else :
         horaire = ""
+        continue
 
 def salaire_mensuel(salaire_annuel) :
     """This function is so divides the 'salaire_annuel' variable by 12"""
@@ -41,3 +49,5 @@ reponse = salaire_horaire(salaire_hebdomadaire_val, int(horaire))
 mode = "horaire"
 
 print("Votre salaire " + mode + " est de "+str(reponse)+ " euros.")
+
+help(salaire_mensuel)
